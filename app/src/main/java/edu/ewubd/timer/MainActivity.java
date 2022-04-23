@@ -19,7 +19,7 @@ public class MainActivity extends AppCompatActivity {
 
     TextView textView ;
 
-    Button start, pause, reset, lap ;
+    Button start, pause, reset, lap,exit ;
 
     long MillisecondTime, StartTime, TimeBuff, UpdateTime = 0L ;
 
@@ -69,6 +69,19 @@ public class MainActivity extends AppCompatActivity {
 
             }
         });
+
+        exit=findViewById(R.id.exit);
+
+
+        exit.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+              finish();
+
+            }
+        });
+
 
         pause.setOnClickListener(new View.OnClickListener() {
             @Override
